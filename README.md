@@ -35,7 +35,7 @@ Tudo roda no seu computador: o app **não se conecta à internet**, não executa
 3. Se aparecer *"O Windows protegeu o computador"* (SmartScreen), clique em **Mais informações → Executar assim mesmo**. O aviso aparece porque o instalador ainda não tem assinatura digital de código. Veja [docs/SEGURANCA.md](docs/SEGURANCA.md).
 4. O app usa o **WebView2** da Microsoft, que já vem no Windows 11 e no Windows 10 atualizado. Se faltar, o instalador baixa automaticamente.
 
-**Versão portátil:** o `AuroraBR_portable.zip` (também na Release) roda sem instalar. Mantenha `aurorabr.exe` e `WebView2Loader.dll` na mesma pasta.
+**Versão portátil:** o `AuroraBR_portable.zip` (também na Release) roda sem instalar: extraia a pasta inteira e execute `aurorabr.exe` (se houver um `WebView2Loader.dll`, ele precisa ficar junto).
 
 Confira a integridade do download comparando o SHA-256 com o arquivo `SHA256SUMS.txt` da Release:
 

@@ -2,7 +2,11 @@
 
 Análise feita em 25/11/2026. Nenhum indício de malware foi encontrado. Nenhuma análise prova que um arquivo está 100% livre de malware; abaixo está o que foi verificado e como qualquer pessoa pode conferir.
 
-## Hashes SHA-256 da versão 1.0.0
+## Hashes SHA-256
+
+**Downloads da página de Releases:** compilados pelo GitHub Actions num Windows, a partir deste código; os hashes estão no arquivo `SHA256SUMS.txt` de cada Release e no log público da build.
+
+**Versão 1.0.0 distribuída diretamente (compilada antes da publicação no GitHub e analisada neste relatório):**
 
 | Arquivo | Tamanho (bytes) | SHA-256 |
 |---|---|---|
