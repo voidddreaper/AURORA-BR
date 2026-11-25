@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB800"/>
+      <stop offset="1" stop-color="#FF6B00"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="#0A0A0A"/>
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="none" stroke="#FF6B00" stroke-opacity="0.55" stroke-width="16"/>
+  <!-- rhombus (Brazilian flag geometry) -->
+  <path d="M512 150 L874 512 L512 874 L150 512 Z" fill="none" stroke="#FF6B00" stroke-opacity="0.35" stroke-width="22"/>
+  <!-- geometric 8-point star -->
+  <path d="M512 230 L572 452 L794 512 L572 572 L512 794 L452 572 L230 512 L452 452 Z" fill="url(#g)"/>
+  <path d="M512 340 L548 476 L684 512 L548 548 L512 684 L476 548 L340 512 L476 476 Z" fill="#0A0A0A"/>
+  <circle cx="512" cy="512" r="46" fill="#FF6B00"/>
+</svg>

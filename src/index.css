@@ -1,0 +1,98 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #000;
+  color: #e5e5e5;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Allow selecting text inside data areas */
+.selectable,
+.selectable * {
+  user-select: text;
+}
+
+/* Thin dark scrollbars (WebView2 / Chromium) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 8px;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B00;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-neutral-800 bg-aurora-card transition-[border-color,box-shadow] duration-200 hover:border-aurora-orange hover:shadow-glow;
+  }
+  .glass {
+    @apply bg-white/[0.035] backdrop-blur-xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-aurora-orange/60;
+  }
+  .btn-primary {
+    @apply btn bg-aurora-orange text-black hover:bg-[#ff8124];
+  }
+  .btn-ghost {
+    @apply btn border border-neutral-800 bg-neutral-900/60 text-neutral-200 hover:border-aurora-orange hover:text-white;
+  }
+  .btn-danger {
+    @apply btn border border-aurora-crimson/40 bg-aurora-crimson/10 text-aurora-crimson hover:bg-aurora-crimson/20;
+  }
+  .input {
+    @apply h-9 rounded-lg border border-neutral-800 bg-black px-3 text-sm text-neutral-100 placeholder-neutral-600 outline-none transition-colors focus:border-aurora-orange;
+  }
+  .label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-neutral-500;
+  }
+}
+
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23FF6B00' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+select.input option {
+  background: #121212;
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(255, 107, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 0, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.recharts-cartesian-grid line {
+  stroke: #1f1f1f;
+}
